@@ -4,13 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, RouterOutlet, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, FormsModule, RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  selector: 'app-add',
+  imports: [CommonModule, FormsModule, RouterModule],
+  templateUrl: './add.component.html',
+  styleUrl: './add.component.scss'
 })
-export class AppComponent {
-  title = 'test-new-porject-v1';
+export class AddComponent {
   protected router: Router = inject(Router);
   protected onRoutingClick = async ($event: MouseEvent) => {
     const value = await this.router.navigate(['/test_mdoule']);
